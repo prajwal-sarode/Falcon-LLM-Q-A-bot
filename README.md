@@ -14,7 +14,6 @@ You can access the deployed application at the following link:
 
 [**Falcon LLM Q&A App**](https://falcon-llm-q-a-bot-akfvwfnz7btdthsbtafc8h.streamlit.app/)
 
-*(Replace the link above with your actual deployed app URL)*
 
 ## Getting Started
 
