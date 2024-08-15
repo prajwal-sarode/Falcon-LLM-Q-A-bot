@@ -2,9 +2,14 @@ import streamlit as st
 import os
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
-from apikey_huggingface import apikey_huggingface
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = apikey_huggingface
+HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+
+if not HUGGINGFACEHUB_API_TOKEN:
+    st.error("Hugging Face API token not found in environment variables.")
+    st.stop()
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = HUGGINGFACEHUB_API_TOKEN
 
 # setup the language model using huggingface api
 
